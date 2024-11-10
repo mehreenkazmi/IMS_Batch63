@@ -1,9 +1,8 @@
 # user.py
-
 class User:
     users = {
-        'admin@gmail.com': {'password': '123456', 'role': 'admin'},
-        'user@gmail.com': {'password': '123456', 'role': 'user'}
+        'owner@gmail.com': {'password': 'owner123', 'role': 'admin'},
+        'customer@gmail.com': {'password': 'customer123', 'role': 'user'}
     }
 
     def __init__(self, email, password):
@@ -17,5 +16,5 @@ class User:
             self.role = user['role']
             return True
         else:
-            print("Invalid credentials.")
+            print("Oops! Incorrect login details. Please try again.")
             return False
